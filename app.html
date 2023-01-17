@@ -66,10 +66,58 @@
    </nav>
     </header>
 
-    <main class="content container">
-    <h1>APP UI GOES HERE</h1>
-    <input id="message" placeholder="Enter a Message..." type="text">
-    <button class="btn btn-primary" type="button" id="btnSubmit"> Display a Message</button>
+    <main class="content container px-4 py-5 mt-5">
+
+        <div class="row row-cols-1 row-cols-md-2 gy-2 h-100 w-100">
+            <div class="col border-2 border-end">
+                <h1 class="fw-bold mb-3">App Name: A Coding Challenge</h1>
+                <h4 class="lead">A javascript coding exercise using loops. 
+                    This program will display numbers from 0 to 100 depending on your input. 
+                    All even numbers will be displayed in <b>bold</b> text!</h4>
+                    <h2 class="mt-5 border-2 border-bottom">Instructions</h2>
+                    <p>Enter a starting value and ending value. Press the button and the values will appear.</p></div>
+            <div class="col">
+                <form action="#" class="row gy-2 gx-3">
+                    <div class="col">
+                        <input id="startValue" 
+                        type="number" 
+                        class="form-control" 
+                        placeholder="Starting Value" 
+                        aria-label="Starting Value" 
+                        value="0"/>
+                    </div>
+                    <div class="col">
+                            <input id="endValue" 
+                            type="number" 
+                            class="form-control" 
+                            placeholder="Ending Value" 
+                            aria-label="Ending Value" 
+                            value="100"/>
+                    </div>
+                    <div class="col-12 text-end">
+                        <button class="btn btn-dark btn-lg" id="btnSubmit" typ="button">Display Values</button>
+                    </div></form>
+                    <h2 class="mt-5 border-bottom border-2">Results</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tbody id="results">
+                                <!--
+                                    Hundo Here
+                                    <tr><td class="odd">1<td><tr>
+                                    <tr><td class="even">2<td><tr>...
+                                -->
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                
+                
+
+
+            </div>
+        </div>
+
+    
     </main>
 
     <footer class="container-fluid footer-main">
@@ -101,7 +149,7 @@
         
         <script src="/js/site.js"></script>
         <script>
-            document.getElementById('btnSubmit').addEventListener('click', displayMessage);
+            document.getElementById('btnSubmit').addEventListener('click', getValues);
         </script>
 </body>
 
